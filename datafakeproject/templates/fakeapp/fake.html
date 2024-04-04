@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Template</title>
+    <script>
+         function scrollToBottom() {
+        window.scrollTo(0,document.body.scrollHeight);
+    }
+         function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
+</head>
+<body style="display: flex; align-items: center; flex-direction: column;">
+      <h1>Scroll To Top And Bottom Feature</h1>  
+      <h2>This is the top section</h2>
+      <button onclick="scrollToBottom()">Scroll to bottom</button>
+        {% for item in student_list %}
+        <div>{{ item.name}}</div>
+        <div>{{item.email}}</div>
+        {% endfor %}
+        <button onclick="scrollToTop()">Scroll to top</button>
+        <h2>This is the Bottom section</h2>
+</body>
+</html>
